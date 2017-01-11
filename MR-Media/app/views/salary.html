@@ -1,0 +1,58 @@
+<div ng-controller="SalaryCtrl">
+  <div class="page__hd">
+    <h1 class="page__title">薪资查询</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 weui-cells weui-cells_form" style="">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">工号</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入工号">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">密码</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="password" pattern="[0-9]*" placeholder="请输入密码">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-10 col-xs-offset-1" style="margin-top: 10%"><button ng-click="showDialog()" class="weui-btn weui-btn_primary" data-toggle="modal">确定</button></div>
+  </div>
+
+
+  <div class="js_dialog" id="salaryDialog" style="display: none;" >
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+      <div class="weui-dialog__bd">您本月的薪资为: 50,000</div>
+      <div class="weui-dialog__ft">
+        <a ng-click="cancelDialog()" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    </div>
+
+<script type="text/javascript">
+  $(function(){
+    var $tooltips = $('.js_tooltips');
+
+    $('#showTooltips').on('click', function(){
+      if ($tooltips.css('display') != 'none') return;
+
+      // toptips的fixed, 如果有`animation`, `position: fixed`不生效
+      $('.page.cell').removeClass('slideIn');
+
+      $tooltips.css('display', 'block');
+      setTimeout(function () {
+        $tooltips.css('display', 'none');
+      }, 2000);
+    });
+  });
+</script>
