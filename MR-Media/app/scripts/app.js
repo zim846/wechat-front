@@ -103,7 +103,7 @@ mrmedia.controller('MainCtrl', function ($state) {
 mrmedia.config(function ($stateProvider, $urlRouterProvider) {
 
 
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/binding");
   $stateProvider
     .state('app', {
       url: '/',
@@ -128,6 +128,19 @@ mrmedia.config(function ($stateProvider, $urlRouterProvider) {
       url: 'talent',
       templateUrl: 'views/talent.html',
       controller: 'TalentCtrl'
+    })
+    .state('app.salaryShow',{
+      url: 'salaryShow',
+      templateUrl: 'views/salaryShow.html',
+      controller: 'SalaryShowCtrl',
+      params: {
+        openId : null
+      }
+    })
+    .state('app.binding',{
+      url: 'binding',
+      templateUrl: 'views/binding.html',
+      controller: 'BindingCtrl'
     })
 
 });

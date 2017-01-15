@@ -54,3 +54,7 @@ gulp serve
 网页子页面位于`app/views`中
 
 `app.js`中配置整个项目的route和angular，子页面的controller位于scripts/controllers文件夹中
+
+
+url= https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxc833e93ee9bb4bc1&redirect_uri=http://112.74.50.130/weChat/check&response_type=code&scope=snsapi_base&state=123#wechat_redirect 
+
