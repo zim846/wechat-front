@@ -140,7 +140,15 @@ mrmedia.config(function ($stateProvider, $urlRouterProvider) {
     .state('app.binding',{
       url: 'binding',
       templateUrl: 'views/binding.html',
-      controller: 'BindingCtrl'
+      controller: 'BindingCtrl',
+      params: {
+        openId : null
+      }
+    })
+    .state('app.loading',{
+      url: 'loading',
+      templateUrl: 'views/loading.html',
+      controller: 'LoadingCtrl'
     })
 
 });
