@@ -2,7 +2,6 @@
 
 mrmedia.controller('LoadingCtrl', ['$scope','NoticeSrv','$state', '$location', '$http', function($scope,NoticeSrv,$state, $location, $http) {
 
-
   var url = $location.absUrl();
   var urlArray= url.split('?');
   var code;

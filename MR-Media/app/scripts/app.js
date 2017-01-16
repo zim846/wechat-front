@@ -103,7 +103,7 @@ mrmedia.controller('MainCtrl', function ($state) {
 mrmedia.config(function ($stateProvider, $urlRouterProvider) {
 
 
-  $urlRouterProvider.otherwise("/binding");
+  $urlRouterProvider.otherwise("/loading");
   $stateProvider
     .state('app', {
       url: '/',
