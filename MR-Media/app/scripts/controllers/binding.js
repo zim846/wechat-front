@@ -20,12 +20,12 @@ mrmedia.controller('BindingCtrl', ['$scope','NoticeSrv','$state', '$location', '
       };
       //send get request.
       $http({
-        method : "GET",
-        url : "/weChat/check"
+        method : 'GET',
+        url : '/weChat/check'
       }).then(function mySucces(response) {
             //响应成功
-            if(response.errCode == 0){
-               openId = response.openId;
+            if(response.data.errCode == 0){
+               openId = response.data.openId;
                $state.go('app.salaryShow', {
                   params: openId
                });}
